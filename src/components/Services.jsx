@@ -7,7 +7,7 @@ import Generating from './Generating'
 import {PhotChatMessage,Gradient,VideoBar,VideoChatMessage} from "./design/Services";
 const Services = () => {
   return (
-    <Section id="how-to-use">
+    <Section crosses id="how-to-use">
         <div className='container'>
             <Heading title="Generative AI made for creators"
             text="Brainwave unlocks the potential of AI-powered Applications">

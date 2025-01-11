@@ -5,10 +5,14 @@ import { roadmap } from '../constants'
 import { div } from 'framer-motion/client'
 import { check2, grid, loading1 } from '../assets'
 import Tagline from './Tagline'
+import Button from './Button'
+import { Gradient } from './design/Hero'
 
 const Roadmap = () => {
   return (
-    <Section className="overflow-hidden"
+    <Section
+    crosses
+    className="overflow-hidden"
     id='roadmap'>
         <div className='container md:pb-10'>
             <Heading tag="Ready to get started"
@@ -20,7 +24,7 @@ const Roadmap = () => {
                     return (
                         <div key={item.id}
                         className={`md:flex even:md:translate-y-[7rem] p-0.25 rounded-[2.5rem] ${item.colorful ? 'bg-conic-gradient' : 'bg-n-6'}`}> 
-                        <div className='relative p-8 bg-n-8 rounded-[2rem] overflow-hidden xl:p-15'>
+                        <div className='relative p-8 bg-n-8 rounded-[2.4375rem] overflow-hidden xl:p-15'>
                             <div className='absolute top-0 left-0 max-w-full'>
                                 <img src={grid} alt="grid"
                                 className='w-full'
@@ -44,7 +48,11 @@ const Roadmap = () => {
                                         </div>
                                     </div>
 
-                                    <div className='mb-10 -my-10 -mx-15'>
+                                    
+
+                            </div>
+
+                            <div className='mb-10 -my-10 -mx-15'>
                                         <img src={item.imageUrl}
                                         className='w-full'
                                         width={630}
@@ -54,13 +62,16 @@ const Roadmap = () => {
                                     <h4 className='h4 mb-4'>{item.title}</h4>
                                     <p className='body-2 text-n-4'>{item.text}</p>
                                 </div>
-
-                            </div>
                         </div>
                         </div>
                     )
                 })}
             </div>
+            <Gradient/>
+        <div className='flex justify-center mt-12 md:mt-15 xl:mt-20'>
+            
+        <Button href="/roadmap">Our roadmap</Button>
+        </div>
         </div>
     </Section>
   )
